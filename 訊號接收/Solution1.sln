@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ESP8266_Wifi_power", "ESP8266_Wifi_power\ESP8266_Wifi_power.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ESP8266_Wifi_in", "ESP8266_Wifi_in\ESP8266_Wifi_in.vcxproj", "{CAE2DA86-DA29-4237-BE6B-7223E906BDB6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ESP8266_Wifi_open", "ESP8266_Wifi_open\ESP8266_Wifi_open.vcxproj", "{D5AABCF0-2901-46EE-A384-60FDF7B6131A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ESP8266_test", "test\ESP8266_test\ESP8266_test.vcxproj", "{66AC4F2A-F410-41C0-984E-C47780E2C679}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.ActiveCfg = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.Build.0 = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
+		{CAE2DA86-DA29-4237-BE6B-7223E906BDB6}.Debug|x86.ActiveCfg = Debug|Win32
+		{CAE2DA86-DA29-4237-BE6B-7223E906BDB6}.Debug|x86.Build.0 = Debug|Win32
+		{CAE2DA86-DA29-4237-BE6B-7223E906BDB6}.Release|x86.ActiveCfg = Release|Win32
+		{CAE2DA86-DA29-4237-BE6B-7223E906BDB6}.Release|x86.Build.0 = Release|Win32
+		{D5AABCF0-2901-46EE-A384-60FDF7B6131A}.Debug|x86.ActiveCfg = Debug|Win32
+		{D5AABCF0-2901-46EE-A384-60FDF7B6131A}.Debug|x86.Build.0 = Debug|Win32
+		{D5AABCF0-2901-46EE-A384-60FDF7B6131A}.Release|x86.ActiveCfg = Release|Win32
+		{D5AABCF0-2901-46EE-A384-60FDF7B6131A}.Release|x86.Build.0 = Release|Win32
+		{66AC4F2A-F410-41C0-984E-C47780E2C679}.Debug|x86.ActiveCfg = Debug|Win32
+		{66AC4F2A-F410-41C0-984E-C47780E2C679}.Debug|x86.Build.0 = Debug|Win32
+		{66AC4F2A-F410-41C0-984E-C47780E2C679}.Release|x86.ActiveCfg = Release|Win32
+		{66AC4F2A-F410-41C0-984E-C47780E2C679}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EED8F2D-EBAC-401A-8F5A-DECD6E6CA1CA}
+	EndGlobalSection
+EndGlobal

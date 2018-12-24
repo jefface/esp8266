@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>北極熊智慧家庭</title>
+</head>
+<body onload=" Show_溫溼度()">
+<div id="inhtmidity"></div>
+<script type="text/javascript">
+function Show_溫溼度(){
+document.getElementById('inhtmidity').textContent ="濕度:"+humidity + "攝氏溫度:" +temperature;
+setTimeout('Show_溫溼度()',1000);
+}
+</script>
+</body>
+<body>
+
+
+<br><font size=15>磁吸鎖控制</font><br>
+<input style="width:120px;height:40px;font-size:20px;" type="button" id = "button_開鎖" value="開鎖"><br>
+<script  language="JavaScript">
+document.getElementById('button_開鎖').addEventListener("click",button_開鎖) 
+function button_開鎖(){
+document.getElementById('button_開鎖').disabled=true;
+setTimeout("document.getElementById('button_開鎖').disabled=false",1000);
+}
+</script>
+<font size=15>開關1</font><br>
+<input style="width:120px;height:40px;font-size:20px;background-color:Chartreuse;" type="button" id = "button_開啟" value="開啟">
+<input style="width: 120px; height: 40px; font-size: 20px;display:none;background-color:red;" type="button" id = "button_關閉" value="關閉">
+<br>
+<script  language="JavaScript">
+document.getElementById('button_開啟').addEventListener("click",button_開關)
+function button_開關(){
+	document.getElementById('button_開啟').style.display = "none";
+	document.getElementById('button_關閉').style.display = "block";
+}
+document.getElementById('button_關閉').addEventListener("click",button_關閉)
+function button_關閉(){
+	document.getElementById('button_關閉').style.display = "none";
+	document.getElementById('button_開啟').style.display = "block";
+	
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>北極熊智慧家庭</title>
+</head>
+<script language="javascript" >
+
+function Show_溫溼度(){
+	var oAjax=new XMLHttpRequest();
+ oAjax.open('GET','/date',true);
+ oAjax.send();
+   oAjax.onreadystatechange = function set_溫溼度() {
+             if (oAjax.readyState == 4&&oAjax.status == 200){
+                　document.getElementById('inhtmidity').innerHTML =oAjax.responseText;
+             }
+	
+}
+var oAjaxname=new XMLHttpRequest();
+ oAjaxname.open('GET','/useclient',true);
+ oAjaxname.send();
+   oAjaxname.onreadystatechange = function userclient() {
+             if (oAjaxname.readyState == 4&&oAjaxname.status == 200){
+                　document.getElementById('useclientext').innerHTML =oAjaxname.responseText;
+             }
+	
+}
+}
+setInterval('Show_溫溼度()',5000);
+</script>
+<div style="width: 300px; height: 50px;font-size:24px">
+<body onload="Show_溫溼度()">
+<div id="inhtmidity"></div>
+</div>
+<div style="width: 300px; height: 400px; position:fixed;top:95px;left:400px; font-size:20px" >
+<div id="useclientext"></div>
+</div>
+</body>
+<font size=15>開關1</font><br>
+<input style="width:120px;height:40px;font-size:20px;background-color:Chartreuse;" type="button" id = "button_開啟" value="開啟">
+
+<input style="width: 120px; height: 40px; font-size: 20px;display:none;background-color:red;" type="button" id = "button_關閉" value="關閉">
+
+<br><br><br><br><br><br><br> 
+<script  language="JavaScript">
+document.getElementById('button_開啟').addEventListener("click",button_開關)
+function button_開關(){
+	document.getElementById('button_開啟').style.display = "none";
+	document.getElementById('button_關閉').style.display = "block";
+	var oAjaxon=new XMLHttpRequest();
+ oAjaxon.open('GET','/on',false);
+ oAjaxon.send();
+   oAjaxon.onreadystatechange = function button_開關() {
+             if (oAjaxon.readyState == 4&&oAjaxon.status == 200){
+                
+             }
+	
+}
+	
+}
+document.getElementById('button_關閉').addEventListener("click",button_關閉)
+function button_關閉(){
+	
+	document.getElementById('button_關閉').style.display = "none";
+	document.getElementById('button_開啟').style.display = "block";
+	 var oAjaxoff=new XMLHttpRequest();
+ oAjaxoff.open('GET','/off',false);
+ oAjaxoff.send();
+   oAjaxoff.onreadystatechange = function button_開關() {
+             if (oAjaxoff.readyState == 4&&oAjaxoff.status == 200){
+                
+             }
+   }
+	
+}
+</script>
+<input style="width: 120px; height: 40px; font-size: 20px" type="button" onclick="self.location.href='/cleareeprom'" value="清除網路">
+
+</body>
+</html>
